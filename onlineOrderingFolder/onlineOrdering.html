@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Order</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../cssFolder/orderStyles.css">
+</head>
+<body>
+    <nav class="navbar navbar-custom">
+        <div class="navbar-header">
+            <img src="../globalImages/companylogo.png" alt="Mi Dulce Rueshe Logo" class="logo">
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../homeFolder/home.html">Home</a></li>
+            <li><a href="../aboutUsFolder/aboutUs.html">About Us</a></li>
+            <li><a href="../menuFolder/menu.html">Menu</a></li>
+            <li class="active"><a href="../onlineOrderingFolder/onlineOrdering.html">Online Ordering</a></li>
+            <li><a href="../specialEventsFolder/specialEvents.html">Event Catering</a></li>
+            <li><a href="../galleryFolder/gallery.html">Gallery & Testimonials</a></li>
+            <li><a href="../blogFolder/blog.html">Blog</a></li>
+            <li><a href="../contactFolder/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Begin content -->
+    <div class="container">
+        <form action="drpgorre@mymail.mapua.edu.ph" method="post">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Custom Cake Selection</legend>
+                <label for="cake-size">Choose a Cake:</label>
+                <select id="cake-size" name="cake-size" required>
+                    <option value="" selected disabled>Select a cake</option>
+                    <option value="6-edible">6" x 5" Edible - ₱7500</option>
+                    <option value="6-non-edible">6" x 5" Non-Edible - ₱5200</option>
+                    <option value="8-edible">8" x 5" Edible - ₱8500</option>
+                    <option value="8-non-edible">8" x 5" Non-Edible - ₱6200</option>
+                    <option value="2tier-top-edible">2-Tier (6"+8") Top Edible - ₱12500</option>
+                    <option value="2tier-bottom-edible">2-Tier (6"+8") Bottom Edible - ₱13520</option>
+                    <option value="2tier-non-edible">2-Tier (6"+8") Non-Edible - ₱11500</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Baked Goods Selection</legend>
+                <div class="checkbox-group">
+					<div class="checkbox-item">
+						<input type="checkbox" id="choco-cake" name="baked-goods[]" value="MDR Chocolate Cake">
+						<label for="choco-cake">MDR Signature Chocolate Cake - ₱650</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="choco-cupcake" name="baked-goods[]" value="Chocolate Cupcake">
+						<label for="choco-cupcake">MDR Chocolate Cupcake - ₱450 [6] | ₱750 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="fudgy-brownie" name="baked-goods[]" value="Fudgy Brownie">
+						<label for="fudgy-brownie">Fudgy Brownie - ₱450 [6] | ₱750 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="oreo-brownie" name="baked-goods[]" value="Oreo Brownie">
+						<label for="oreo-brownie">Oreo Brownie - ₱500 [6] | ₱850 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="smores-brownie" name="baked-goods[]" value="Smores Brownie">
+						<label for="smores-brownie">Smores Brownie - ₱500 [6] | ₱850 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="banana-muffin" name="baked-goods[]" value="Banana Muffin">
+						<label for="banana-muffin">Banana Muffin - ₱400 [6] | ₱650 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="nutella-muffin" name="baked-goods[]" value="Nutella Muffin">
+						<label for="nutella-muffin">Nutella Banana Muffin - ₱450 [6] | ₱700 [12]</label>
+					</div>
+
+					<div class="checkbox-item">
+						<input type="checkbox" id="brazo-cupcake" name="baked-goods[]" value="Brazo Cupcake">
+						<label for="brazo-cupcake">Brazo de Mercedes Cupcakes - ₱500 [6] | ₱900 [12]</label>
+					</div>
+				</div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+
+                <label for="shipping-method">Select Delivery Method:</label>
+                <select id="shipping-method" name="shipping-method" required>
+                    <option value="" selected disabled>Select a delivery method</option>
+                    <option value="standard">Standard Delivery (5-7 days)</option>
+                    <option value="express">Express Delivery (2-3 days)</option>
+                    <option value="pickup">Pickup from Store</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="preferences">Special Requests:</label>
+                <textarea id="preferences" name="preferences" rows="3"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h4 class="text-center">Mi Dulce Rueshe</h4>
+        <p>Website Developed By: Johann Aguna, Marla Canlas, Jan Bautista, Dominique Gorre</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/midulcerueshe/" target="_blank">
+                <img src="../globalImages/companylogo.png" alt="Facebook Logo" class="footer-logo">
+            </a>
+        </div>
+		<a href="../sitemap.html"><p>Site map</p></a>
+    </footer>
+</body>
+</html>
